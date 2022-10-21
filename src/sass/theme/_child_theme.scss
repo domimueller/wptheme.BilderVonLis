@@ -1,0 +1,311 @@
+/* #### General  #### */
+
+h1, h2, h3, h4, h5 {color: $primary;}
+.image-container {text-align: center;}
+.location-desc, .chili-types {margin-top: $Space; margin-bottom: $hugeSpace;}
+.card-wrapper, .card-holder {margin-top: $hugeSpace; margin-bottom: $hugeSpace;}
+
+.tooltip-holder {color:#212549; cursor: pointer; display:inline-block;} 
+
+
+
+/* #### Nav  #### */
+[title="customMenuelement-hidden"]{
+    display: none !important;
+}
+
+nav#main-nav.navbar .navbar-nav .nav-link {padding-left: 10px; padding-right:10px;}
+nav#main-nav.navbar .navbar-nav .nav-link {color:#fff;}
+nav#main-nav.navbar .navbar-nav .active  .nav-link, nav#main-nav.navbar .navbar-nav .nav-link:hover  {text-decoration: underline;}
+
+
+/* #### home #### */
+
+/* home nav*/
+body.home nav {background-color: transparent !important; position: absolute; z-index: 999; top: 0; min-height: 166px; width: 100%;}
+
+
+/* hero slider */
+.carousel {max-height: 100vh;}
+.carousel.slide .wp-block-cover__inner-container p, .wp-block-cover p:not(.has-text-color) {color:#fff !important; font-size: 2rem;}
+body .carousel-control-prev:focus, body .carousel-control-prev:active, body .carousel-control-next:focus, body .carousel-control-next:active, a.navbar-brand:focus, body.home .menu-item a:focus, .image-container a:focus {outline:none !important;}
+
+.custom-slidercontroller-container {width: 100%; position: relative; z-index:10; cursor: pointer; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out;}
+
+.custom-slidercontroller-container:hover {animation-name: bounce; -moz-animation-name: bounce; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; }
+
+.custom-slidercontroller-container svg {position: absolute; top: -75px; font-size:70px; color: #fff; width: 100%; text-align: center;z-index:10;}
+
+/* home layount*/
+.partner-row, .facts-row, .custom-postentry-row {margin-top: $largeSpace;}
+.facts-row, .custom-postentry-row {margin-bottom: $largeSpace;}
+.facts-row .title-col {margin-bottom: $smallSpace;}
+
+
+/* partner*/
+.partner-col .button-container {text-align: center; margin-top: $hugeSpace;}
+.partner-col .image-container {margin-bottom: $hugeSpace;}
+
+/* facts */
+.fact-col {text-align: center;}
+.facts-row span.fact-icon svg {font-size:50px;}
+.facts-row h5 {color:#212529;}
+
+.fact-icon {display:block; margin-bottom: $largeSpace;}
+
+.fact-col {cursor: pointer; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out;}
+
+.fact-col:hover{animation-name: bounce;-moz-animation-name: bounce;animation-iteration-count: infinite;-webkit-animation-iteration-count: infinite;}
+.fact-col:hover svg, .fact-col:hover h5{color: $primary;}
+
+/* #### Chilis and Locations ####*/
+.location-container {cursor:pointer;}
+
+
+.spicy-degree-container, .location-container {margin-bottom: $smallSpace; margin-top: $smallSpace;}
+.image-container {margin-top: $smallSpace;}
+.button-container {margin-bottom: $smallSpace; margin-top: $Space;}
+
+
+/* spicy */
+.spicy-degree-container img, .spicy-footer-container img {max-width: 15px;}
+
+.spicy-footer-container {display: inline-block; margin-left:15px;}
+
+
+spicy-degree-container img {
+    cursor: pointer;
+    padding:0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+spicy-degree-container img:hover {
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;    
+}
+
+
+/*Footer*/
+
+
+#wrapper-footer {background-color: $primary;}
+
+.site-footer a {margin-right: 5px; color: #fff; }
+.first-footer-part a{display:inline-block; margin-top:65px;}
+footer a.custom-logo-link {max-height: 150px; max-width: 150px; margin-top:0; margin-bottom:0; }
+
+
+
+
+/* #### LOGO  #### */
+
+a.custom-logo-link {max-height: 150px; max-width: 150px; margin-top:0; margin-bottom:0; }
+
+.navbar-brand {
+    cursor: pointer;
+    padding:0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.navbar-brand:hover {
+    cursor: pointer;
+    animation-name: enlarge;
+    -moz-animation-name: enlarge;
+}
+
+
+header .navbar-brand:hover {
+    animation-name: enlarge;
+    -moz-animation-name: enlarge;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+}
+
+footer .navbar-brand:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+/* ### POST ENTRIES ON HOMEPAGE */
+
+.custom-postentry-col {margin-top: $hugeSpace; margin-bottom: $hugeSpace; }
+.image-container {margin-top: $largeSpace; margin-bottom: $largeSpace; text-align: center;}
+.card {box-shadow: 0 1px 3px rgb(34 40 49 / 20%); border-radius: 3px; -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; padding: 3rem 2.75rem;}
+.text-container {margin-top: 10px; margin-bottom: 0px;}
+.entry-header {margin-bottom: $Space;}
+
+/* #### Form Styles #### */
+
+
+.gform_wrapper .gfield_description {color: $primary;}
+body .gform_wrapper .gsection {border-bottom: 0px solid #ccc;}
+
+body .gform_wrapper ul.gform_fields li.gfield {margin-top: $largeSpace; margin-bottom: $largeSpace; padding-right: $hugeSpace;}
+
+/*section title*/
+
+/*will be overwriten for desktops. only important for mobile*/
+body .gform_wrapper ul.gform_fields li.gfield.gsection {margin-top: $hugeSpace;margin-bottom: $Space; float: left; width: 100%;}
+.gform_wrapper ul.gform_fields li.gfield.fullsize {width: 100%;}
+.gform_wrapper ul.gform_fields li.gfield.fullsize, body .gform_wrapper ul.gform_fields li.gfield {padding-right:0;}
+
+body .gform_wrapper .top_label .ginput_container input.small, body  .gform_wrapper .top_label input.medium, body .gform_wrapper .top_label select {width: 100%;}
+
+/*will be overwriten for desktops. only important for mobile*/
+body .gform_wrapper .ginput_container textarea  {width: 100%;}
+
+body .gform_wrapper.gravity-theme fieldset.fieldsetAdvancedMargin {margin-top: $largeSpace;}
+li.gfield {margin-top: $largeSpace; margin-bottom: $largeSpace;}
+
+form label.gfield_label, form .instruction {display: none !important;}
+
+
+input[type="date"], input[type="datetime"], input[type="datetime-local"],  input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="range"], input[type="search"], input[type="tel"],  input[type="text"], input[type="time"], input[type="url"], input[type="week"] , textarea, select{
+	background-color: transparent !important;
+	border-radius: 0;
+	border: 2px solid $primary;
+	color: $primary;
+	height: 45px;
+	outline: none;
+}
+
+
+
+
+
+/* gfield html comments  */
+.gfield_html_formatted {display: block;}
+
+input[type="submit"]{
+    width: 200px;
+    cursor: pointer;
+    margin-top: $Space;
+    padding: 10px $largeSpace 11px;
+    border-style: solid;
+    border-color: $primary;
+    border-width: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 3px;
+    border-radius: 2px;
+    background: $primary;
+    color: #fff;
+    font-weight: normal;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+
+input[type="submit"]:hover {
+    background: #fff !important;
+    color: $primary !important;
+    border-color: $primary;
+
+}   
+
+
+/* #### Buttons etc #### */
+
+a:focus, input:focus, textarea:focus, button:focus {outline: 2px solid $primary !important ;}
+a:focus, button:focus, .button.alt:focus, input:focus, textarea:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus { outline-color:$primary !important }
+
+.customBoutton.moreInformation span {display:inline-block; margin-right: 8px;}
+
+.customBoutton, .btn-info,  body.page-template-template-sell .gform_button.button{ width: 230px; cursor: pointer; margin-top: 20px; padding: 10px 30px 11px; border-style: solid; border-color: $primary; border-width: 2px; -webkit-border-radius: 2px; -moz-border-radius: 3px; border-radius: 2px; background: $primary; color: #fff; text-transform: uppercase; font-weight: normal; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; -ms-border-radius: 3px; -o-border-radius: 3px;}
+.customBoutton:hover, body.post-type-archive-inseratposttype .btn-info:hover, body.post-type-archive-inseratposttype .btn-info:focus, body.post-type-archive-inseratposttype .btn-info:active, .btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle,  body.page-template-template-sell .gform_wrapper .button:hover, body.page-template-template-sell .gform_button:hover, body.page-template-template-sell .gform_button:focus  {background: #fff !important; color: $primary !important; border-color: $primary}
+
+
+
+
+
+/* #### RESPONSIVE #### */
+
+
+/* DESKTOP ONLY */
+
+@media (min-width: 992px) {
+
+    body .gform_wrapper ul li.gfield.halfsize {width: 45%;}
+    .gform_wrapper ul.gform_fields li.gfield {clear:none; float: left;} 
+    body .gform_wrapper .ginput_container textarea  {width: 90%;}
+    body .gform_wrapper ul.gform_fields li.gfield.gsection {margin-bottom: 0;} 
+    .gform_wrapper ul.gform_fields li.gfield.fullsize, body .gform_wrapper ul.gform_fields li.gfield {padding-right:$hugeSpace;}
+}
+
+/* XS ONLY (Phone) */
+
+@media (max-width: 576px) {
+
+    body #wrapper-footer{text-align:center;}
+
+    h1, h2, h3, h4, h5, h6 {text-align:center;}
+    .btn-info, .customBoutton, .woocommerce-info a.button, body.page-template-template-sell .gform_button.button {width: 100%; display:block; text-align:center;}
+
+
+}
+
+/* #### effects #### */
+@keyframes bounce {
+    0%, 100%, 20%, 50%, 80% {
+        -webkit-transform: translateY(0);
+        -ms-transform:     translateY(0);
+        transform:         translateY(0);
+        
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        -ms-transform:     translateY(-30px);
+        transform:         translateY(-30px);
+        
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        -ms-transform:     translateY(-15px);
+        
+    }
+}
+
+@keyframes enlarge {
+    0%, 20%, 50%, 80% {
+        -webkit-transform: scale(1);
+        -ms-transform:     scale(1);
+        transform:         scale(1);
+    }
+    /* 40% {
+        //-webkit-transform: scale(1.5);
+        //-ms-transform:     scale(1.5);
+        transform:           scale(1.5);
+    }*/
+
+    100% {
+            -webkit-transform: scale(2);
+            -ms-transform:     scale(2);
+            transform:         scale(2);
+        }    
+}
+
