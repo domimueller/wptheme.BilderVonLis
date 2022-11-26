@@ -18,7 +18,19 @@ if ( is_front_page() ) {
 
 
 }
+$args = [
+    'post_type' => 'page',
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'page-templates/template-reservation.php'
+];
+$reservationpage = get_posts($args);
+// only one page should have page template reservation
+$reservationpage = $reservationpage[0];
 
+$reservationpageURL = get_permalink($reservationpage->ID);
+
+
+global $reservationpageURL;
 
 ?>
 
@@ -41,7 +53,7 @@ if ( is_front_page() ) {
 						<div class="col-sm-12">
 							<div class="row facts-row ">
 								<div class="title-col col-sm-12">
-									<h2>Über uns </h2>
+									<h2>Kurz & Knapp</h2>
 								</div>	
 
 							<?php
@@ -69,90 +81,19 @@ if ( is_front_page() ) {
 						</div> <!-- col -->					
 					
 
-
-					<!-- ######## Aktuelles Section ########  -->
-					<?php
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'loop-templates/content', 'page' );
-
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
-					}
-
-					?>
-
-					<?php
-					get_template_part( 'loop-templates/', 'content' );
-					
-						$args = array(
-	    					'post_type'  => 'post',
-	    					'numberposts' => -1,
-	    					'post_status' => 'publish', 
-    						'orderby' => 'menu_order', 
-    						'order' => 'ASC', 
-
-						);
-
 					
 
-					?>
-					
-					
-					<div class="row custom-postentry-row ">
-					<?php
-
-					$postlist = get_posts( $args );
-					foreach ($postlist as $postentry ) {
-						 
-
-						?>
-						 
-							<div class="col-md-6 col-md-6 custom-postentry-col" >
-								<div class="card">
-									<h3><?php echo $postentry->post_title;?></h3>
-							 		
-							 		<?php 
-										if ( has_post_thumbnail($postentry->ID) == true):
-								 		?>
-									 		<div class="image-container">							 			
-									 			<a href="<?=$customPostentryLink?>" target="_blank">
-									 				<img src="<?=get_the_post_thumbnail_url($postentry->ID, 'medium')?>" />
-									 			</a>								 			
-									 		</div>	
-								 	<?php		
-										endif; 
-							 		?>
-						 					
-					 				<div class="text-container">
-						 				<?php		
-						 					$postentrycontent = get_the_content(null, false, $postentry->ID);
-						 					echo apply_filters('the_content', $postentrycontent);						 				
-						 				?>								 		
-						 			</div>
-							 				
-								</div>
-							</div>	
-
-						
-						<?php
-					}
-					?>
-					
-
-					<!-- ######## Partners Section ########  -->					
+					<!-- ######## Kunstwerke Section ########  -->					
 					<div class="col-sm-12">
-						<div class="row partner-row ">
+						<div class="row kunstwerke-row ">
 							<div class="title-col col-sm-12">
-								<h2>Unsere Partner </h2>
+								<h2>Die Bilder</h2>
 							</div>	
 
 						<?php
 
 							$args = array(
-		    					'post_type'  => 'domi_partners_cpt',
+		    					'post_type'  => 'kunstwerkposttype',
 		    					'numberposts' => -1,
 		    					'post_status' => 'publish', 
 	    						'orderby' => 'menu_order', 
@@ -161,13 +102,12 @@ if ( is_front_page() ) {
 							);
 
 
-						$partners = get_posts( $args );
-						
+						$kunstwerke = get_posts( $args );
 						?>
 
 						<?php 
-						foreach ($partners as $partner ) {
-							get_template_part( 'loop-templates/content', 'partners' );	
+						foreach ($kunstwerke as $kunstwerk ) {
+							get_template_part( 'loop-templates/content', 'kunstwerke' );	
 						}
 						?>
 

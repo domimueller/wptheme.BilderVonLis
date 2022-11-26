@@ -1,13 +1,17 @@
 /* #### General  #### */
 
-h1, h2, h3, h4, h5 {color: $primary;}
+h1, h2, h3 h5 {color: $primary;}
+h4 {color: $text; font-size: 1rem; font-weight: bold; display:inline-block;}
 .image-container {text-align: center;}
 .location-desc, .chili-types {margin-top: $Space; margin-bottom: $hugeSpace;}
 .card-wrapper, .card-holder {margin-top: $hugeSpace; margin-bottom: $hugeSpace;}
 
+
+.site-info {color:white; text-align: center;}
 .tooltip-holder {color:#212549; cursor: pointer; display:inline-block;} 
 
-
+/* imgages */
+#secondary img, article img, figure, img, img.wp-post-image {max-height: 100vh;}
 
 /* #### Nav  #### */
 [title="customMenuelement-hidden"]{
@@ -37,26 +41,25 @@ body .carousel-control-prev:focus, body .carousel-control-prev:active, body .car
 .custom-slidercontroller-container svg {position: absolute; top: -75px; font-size:70px; color: #fff; width: 100%; text-align: center;z-index:10;}
 
 /* home layount*/
-.partner-row, .facts-row, .custom-postentry-row {margin-top: $largeSpace;}
+.kunstwerk-row, .facts-row, .custom-postentry-row {margin-top: $largeSpace;}
 .facts-row, .custom-postentry-row {margin-bottom: $largeSpace;}
 .facts-row .title-col {margin-bottom: $smallSpace;}
 
 
-/* partner*/
-.partner-col .button-container {text-align: center; margin-top: $hugeSpace;}
-.partner-col .image-container {margin-bottom: $hugeSpace;}
+/* kunstwerk*/
+.kunstwerk-col .button-container {text-align: center; margin-top: $hugeSpace;}
+.kunstwerk-col .image-container {margin-bottom: $hugeSpace;}
+.info-block {display:inline-block; text-align: center;}
 
 /* facts */
 .fact-col {text-align: center;}
-.facts-row span.fact-icon svg {font-size:50px;}
-.facts-row h5 {color:#212529;}
+.facts-row span.fact-icon svg {font-size:50px; color: #0D7780; }
+.facts-row h5 {color:$text;}
 
 .fact-icon {display:block; margin-bottom: $largeSpace;}
 
 .fact-col {cursor: pointer; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out;}
 
-.fact-col:hover{animation-name: bounce;-moz-animation-name: bounce;animation-iteration-count: infinite;-webkit-animation-iteration-count: infinite;}
-.fact-col:hover svg, .fact-col:hover h5{color: $primary;}
 
 /* #### Chilis and Locations ####*/
 .location-container {cursor:pointer;}
@@ -64,7 +67,7 @@ body .carousel-control-prev:focus, body .carousel-control-prev:active, body .car
 
 .spicy-degree-container, .location-container {margin-bottom: $smallSpace; margin-top: $smallSpace;}
 .image-container {margin-top: $smallSpace;}
-.button-container {margin-bottom: $smallSpace; margin-top: $Space;}
+.button-container {margin-bottom: $smallSpace; margin-top: $Space; text-align: center;}
 
 
 /* spicy */
@@ -108,15 +111,8 @@ footer a.custom-logo-link {max-height: 150px; max-width: 150px; margin-top:0; ma
 
 a.custom-logo-link {max-height: 150px; max-width: 150px; margin-top:0; margin-bottom:0; }
 
-.navbar-brand {
-    cursor: pointer;
-    padding:0;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
+.navbar-brand, .carousel-control-prev-icon, .carousel-control-next-icon {
+    display: none !important;
 }
 
 .navbar-brand:hover {
@@ -231,12 +227,14 @@ input[type="submit"]:hover {
 
 /* #### Buttons etc #### */
 
-a:focus, input:focus, textarea:focus, button:focus {outline: 2px solid $primary !important ;}
+a:focus, input:focus, input:hover, textarea:focus, textarea:hover, button:focus {outline: 2px solid $primary !important ;}
 a:focus, button:focus, .button.alt:focus, input:focus, textarea:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus { outline-color:$primary !important }
 
 .customBoutton.moreInformation span {display:inline-block; margin-right: 8px;}
 
-.customBoutton, .btn-info,  body.page-template-template-sell .gform_button.button{ width: 230px; cursor: pointer; margin-top: 20px; padding: 10px 30px 11px; border-style: solid; border-color: $primary; border-width: 2px; -webkit-border-radius: 2px; -moz-border-radius: 3px; border-radius: 2px; background: $primary; color: #fff; text-transform: uppercase; font-weight: normal; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; -ms-border-radius: 3px; -o-border-radius: 3px;}
+
+
+.customBoutton, .btn-info,  body.page-template-template-sell .gform_button.button{ min-width: 340px !important; cursor: pointer; margin-top: 20px !important; padding: 10px 30px 11px !important; border-style: solid !important; border-color: $primary !important; border-width: 2px !important; -webkit-border-radius: 2px !important; -moz-border-radius: 3px !important; border-radius: 2px !important; background: $primary !important; color: #fff !important; text-transform: uppercase; font-weight: normal; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; -ms-border-radius: 3px; -o-border-radius: 3px;}
 .customBoutton:hover, body.post-type-archive-inseratposttype .btn-info:hover, body.post-type-archive-inseratposttype .btn-info:focus, body.post-type-archive-inseratposttype .btn-info:active, .btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle,  body.page-template-template-sell .gform_wrapper .button:hover, body.page-template-template-sell .gform_button:hover, body.page-template-template-sell .gform_button:focus  {background: #fff !important; color: $primary !important; border-color: $primary}
 
 

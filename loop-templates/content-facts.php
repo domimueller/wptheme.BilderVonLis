@@ -11,7 +11,7 @@ global $fact;
 $factMeta = get_fields($fact->ID); 
 
 // different layout for home and "facts"
-$columnwidth = 'fact-col card-holder' . ' ' . (is_front_page() ? 'col-sm-4' : 'col-sm-6');
+$columnwidth = 'fact-col card-holder' . ' ' . (is_front_page() ? 'col-sm-6' : 'col-sm-6');
 $facttype =  (is_front_page() ? 'smallfactLayout' : 'bigfactLayout');
 
 ?>

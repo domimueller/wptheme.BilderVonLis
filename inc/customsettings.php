@@ -1,7 +1,7 @@
 <?php
 
 
-add_image_size( 'teampicture', 1024, 512 );
+add_image_size( 'kunstwerkSize', 1024, 512 );
 
 
 // add acf options page

@@ -27,9 +27,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info row">
 
-						<div class="site-info first-footer-part col-sm-8">
+						<div class="site-info first-footer-part col-sm-12">
 
-							<a href="https://www.instagram.com/fg_chilis/" target="_blank">Füürgüggù auf Instagram </a>
+							<i class="fa-regular fa-heart"></i> <i class="fa-regular fa-heart"></i> <i class="fa-regular fa-heart"></i>
+
 
 						</div>
 
