@@ -1,5 +1,27 @@
 <?php
 
+function modify_post_data( $post_data, $form, $args ) {
+
+    $title_before_submission = get_the_title($post_data['ID']);
+    $title_after_submission = 'Reserviert - ' . $title_before_submission;
+    $post_data['post_title'] =  $title_after_submission;
+
+    $id = $post_data['ID'];
+
+    update_post_meta($id,'kunstwerk_reservationsstatus', 'reserviert');
+
+    return $post_data;
+}
+add_filter( 'af/form/editing/post_data', 'modify_post_data', 10, 3 );
+
+
+function filter_submit_button_attributes( $attributes, $form, $args ) {
+    $attributes['class'] .= ' customBoutton moreInformation';
+    
+    return $attributes;
+}
+add_filter( 'af/form/button_attributes', 'filter_submit_button_attributes', 10, 3 );
+
 
 add_image_size( 'kunstwerkSize', 1024, 512 );
 

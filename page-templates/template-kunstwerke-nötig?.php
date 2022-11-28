@@ -1,21 +1,22 @@
 <?php
 /**
- * Template Name: Chili Template
+ * Template Name: Kunstwerke Template
  *
- * Template für die Darstellung der Chilis
+ * Template für die Darstellung der Kunstwerke
  *
  * @package Understrap
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-global $chili;
+global $kunstwerke;
+
 
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 
 if ( is_front_page() ) {
-	get_template_part( 'global-templates/hero' );
+	//get_template_part( 'global-templates/hero' );
 }
 ?>
 
@@ -41,8 +42,9 @@ if ( is_front_page() ) {
 					}
 
 					
+
 						$args = array(
-	    					'post_type'  => 'domi_chili_cpt',
+	    					'post_type'  => 'domi_kunstwerke_cpt',
 	    					'numberposts' => -1,
 	    					'post_status' => 'publish', 
     						'orderby' => 'menu_order', 
@@ -50,17 +52,20 @@ if ( is_front_page() ) {
 
 						);
 
+
+
 					?>
 					
-					<div class="row chili-row card-holder">
+					<div class="row kunstwerke-row card-holder ">
 					<?php
 
-					$chilis = get_posts( $args );
-					foreach ($chilis as $chili ) {
-						get_template_part( 'loop-templates/content', 'chilis' );	
+					$kunstwerke = get_posts( $args );
+
+					foreach ($kunstwerk as $kunstwerke ) {
+						get_template_part( 'loop-templates/content', 'kunstwerke' );	
 					}
 					?>
-					</div> <!-- chili row-->
+					</div> <!-- kunstwerke row-->
 
 				</main><!-- #main -->
 

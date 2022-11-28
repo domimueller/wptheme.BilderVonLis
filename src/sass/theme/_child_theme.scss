@@ -6,6 +6,8 @@ h4 {color: $text; font-size: 1rem; font-weight: bold; display:inline-block;}
 .location-desc, .chili-types {margin-top: $Space; margin-bottom: $hugeSpace;}
 .card-wrapper, .card-holder {margin-top: $hugeSpace; margin-bottom: $hugeSpace;}
 
+.post-navigation {margin-top: 20px; padding-left:0; padding-right: 80px;}
+
 
 .site-info {color:white; text-align: center;}
 .tooltip-holder {color:#212549; cursor: pointer; display:inline-block;} 
@@ -21,6 +23,15 @@ h4 {color: $text; font-size: 1rem; font-weight: bold; display:inline-block;}
 nav#main-nav.navbar .navbar-nav .nav-link {padding-left: 10px; padding-right:10px;}
 nav#main-nav.navbar .navbar-nav .nav-link {color:#fff;}
 nav#main-nav.navbar .navbar-nav .active  .nav-link, nav#main-nav.navbar .navbar-nav .nav-link:hover  {text-decoration: underline;}
+body .aligncenter, body .ml-auto, body .mx-auto {margin-left:0px !important;}
+body.home #main-nav {display:none;}
+
+/* #### sticky footer #### */
+
+html, body { height: 100% } 
+.site { min-height: 100%; position:relative; padding-bottom: 84px;} 
+.wrapper#wrapper-footer { bottom: 0; height: 84px; left: 0; position: absolute; right: 0; }
+
 
 
 /* #### home #### */
@@ -50,6 +61,19 @@ body .carousel-control-prev:focus, body .carousel-control-prev:active, body .car
 .kunstwerk-col .button-container {text-align: center; margin-top: $hugeSpace;}
 .kunstwerk-col .image-container {margin-bottom: $hugeSpace;}
 .info-block {display:inline-block; text-align: center;}
+#right-sidebar .acf-fields > .acf-field, #right-sidebar .af-submit {padding: 15px 0px; }
+.info-block-seperator {margin-left: $minimalSpace; margin-right: $minimalSpace;}
+.image-container img {box-shadow: 0 1px 3px rgb(34 40 49 / 20%); border-radius: 3px; border: 1px solid rgba(0,0,0,.125);}
+
+/*Reservation Cards*/
+
+.reservationsstatus-reserviert .reservations-card  {color: $reserverd; width: 100%; text-align: center;}
+.reservationsstatus-offen .reservations-card {display:none;}
+.info-block-reservationsstatus, .info-block-material {text-align: left; display:block;}
+.info-block-reservationsstatus {margin-bottom: $minimalSpace;}
+.details-box {margin-bottom: $largeSpace; }
+.details-box h2 {border-bottom: #EEEEEE solid 1px; padding-bottom: 0.5rem; margin-bottom: $smallSpace;}
+.acf-fields > .acf-field {padding: 15px 0px;}
 
 /* facts */
 .fact-col {text-align: center;}
@@ -58,7 +82,7 @@ body .carousel-control-prev:focus, body .carousel-control-prev:active, body .car
 
 .fact-icon {display:block; margin-bottom: $largeSpace;}
 
-.fact-col {cursor: pointer; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out;}
+.fact-col  {-webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out;}
 
 
 /* #### Chilis and Locations ####*/
@@ -234,7 +258,7 @@ a:focus, button:focus, .button.alt:focus, input:focus, textarea:focus, input[typ
 
 
 
-.customBoutton, .btn-info,  body.page-template-template-sell .gform_button.button{ min-width: 340px !important; cursor: pointer; margin-top: 20px !important; padding: 10px 30px 11px !important; border-style: solid !important; border-color: $primary !important; border-width: 2px !important; -webkit-border-radius: 2px !important; -moz-border-radius: 3px !important; border-radius: 2px !important; background: $primary !important; color: #fff !important; text-transform: uppercase; font-weight: normal; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; -ms-border-radius: 3px; -o-border-radius: 3px;}
+.customBoutton, .btn-info,  body.page-template-template-sell .gform_button.button{ width: 100%; min-width: 240px !important; cursor: pointer; margin-top: 20px !important; padding: 10px 30px 11px !important; border-style: solid !important; border-color: $primary !important; border-width: 2px !important; -webkit-border-radius: 2px !important; -moz-border-radius: 3px !important; border-radius: 2px !important; background: $primary !important; color: #fff !important; text-transform: uppercase; font-weight: normal; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; -ms-border-radius: 3px; -o-border-radius: 3px;}
 .customBoutton:hover, body.post-type-archive-inseratposttype .btn-info:hover, body.post-type-archive-inseratposttype .btn-info:focus, body.post-type-archive-inseratposttype .btn-info:active, .btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle,  body.page-template-template-sell .gform_wrapper .button:hover, body.page-template-template-sell .gform_button:hover, body.page-template-template-sell .gform_button:focus  {background: #fff !important; color: $primary !important; border-color: $primary}
 
 
@@ -253,6 +277,12 @@ a:focus, button:focus, .button.alt:focus, input:focus, textarea:focus, input[typ
     body .gform_wrapper .ginput_container textarea  {width: 90%;}
     body .gform_wrapper ul.gform_fields li.gfield.gsection {margin-bottom: 0;} 
     .gform_wrapper ul.gform_fields li.gfield.fullsize, body .gform_wrapper ul.gform_fields li.gfield {padding-right:$hugeSpace;}
+}
+
+
+@media (max-width: 767px) {
+
+    .details-box {margin-top: $largeSpace;}
 }
 
 /* XS ONLY (Phone) */
